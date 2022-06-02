@@ -483,7 +483,9 @@ endif
 $(call inherit-product, vendor/xiaomi/mithorium-common/mithorium-common-vendor.mk)
 
 # ih8sn
+ifneq ($(ROM),cipher)
 $(call inherit-product-if-exists, ih8sn/ih8sn.mk)
+endif
 
 # ringtones
 $(call inherit-product-if-exists, vendor/xiaomi/ringtones/ringtones-vendor.mk)
